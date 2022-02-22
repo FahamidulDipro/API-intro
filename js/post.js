@@ -6,11 +6,11 @@ function showPosts(data) {
     const postSection = document.getElementById('post-section');
     for (const post of data) {
         const div = document.createElement('div');
-        const p = document.createElement('p');
-        div.innerText = post.title;
-        p.innerText = post.body;
+        div.classList.add('post');
+        div.innerHTML = `<h2>${post.title}</h2>
+        <p>${post.body}</p>
+        `;
         postSection.appendChild(div);
-        div.appendChild(p);
     }
 
 }
